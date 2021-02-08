@@ -1,8 +1,10 @@
 package com.gourav.springboot;
 
+import com.gourav.springboot.service.CustomerService;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.boot.test.web.client.TestRestTemplate;
 import org.springframework.boot.web.server.LocalServerPort;
 
@@ -21,6 +23,9 @@ public class TestRestRequest {
 
     @Autowired
     private TestRestTemplate testRestTemplate;
+
+    @MockBean
+    private CustomerService customerService;
 
     @Test
     public void testAPI() {
