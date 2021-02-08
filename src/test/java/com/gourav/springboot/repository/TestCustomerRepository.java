@@ -1,4 +1,4 @@
-package com.gourav.springboot;
+package com.gourav.springboot.repository;
 
 import com.gourav.springboot.domain.Customer;
 import com.gourav.springboot.repository.CustomerRepository;
