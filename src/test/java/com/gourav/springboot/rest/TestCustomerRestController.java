@@ -1,7 +1,8 @@
-package com.gourav.springboot;
+package com.gourav.springboot.rest;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 
+import com.gourav.springboot.CustomerRestController;
 import com.gourav.springboot.domain.Customer;
 import com.gourav.springboot.service.CustomerService;
 import org.junit.jupiter.api.Test;
@@ -16,6 +17,10 @@ import java.util.List;
 
 import static org.hamcrest.Matchers.hasSize;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
+
+/**
+ * @author gourav
+ */
 
 @WebMvcTest(CustomerRestController.class)
 public class TestCustomerRestController {

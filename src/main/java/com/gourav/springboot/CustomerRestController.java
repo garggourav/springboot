@@ -10,6 +10,9 @@ import org.springframework.web.bind.annotation.*;
 import javax.annotation.PostConstruct;
 import java.util.List;
 
+/**
+ * @author gourav
+ */
 
 @RestController
 @RequestMapping("/customer")
@@ -47,11 +50,11 @@ public class CustomerRestController {
     }
 
     @PostConstruct
-    public void addData(){
-        customerService.save(new Customer(1L,"Jack", "Bauer"));
-        customerService.save(new Customer(2L,"Chloe", "O'Brian"));
-        customerService.save(new Customer(3L,"Kim", "Bauer"));
-        customerService.save(new Customer(4L,"David", "Palmer"));
-        customerService.save(new Customer(5L,"Michelle", "Dessler"));
+    public void addData() {
+        customerService.save(new Customer(1L, "Jack", "Bauer"));
+        customerService.save(new Customer(2L, "Chloe", "O'Brian"));
+        customerService.save(new Customer(3L, "Kim", "Bauer"));
+        customerService.save(new Customer(4L, "David", "Palmer"));
+        customerService.save(new Customer(5L, "Michelle", "Dessler"));
     }
 }

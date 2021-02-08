@@ -1,4 +1,4 @@
-package com.gourav.springboot;
+package com.gourav.springboot.rest;
 
 import com.gourav.springboot.service.CustomerService;
 import org.junit.jupiter.api.Test;
@@ -8,6 +8,9 @@ import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.boot.test.web.client.TestRestTemplate;
 import org.springframework.boot.web.server.LocalServerPort;
 
+/**
+ * @author gourav
+ */
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 public class TestRestRequest {
 

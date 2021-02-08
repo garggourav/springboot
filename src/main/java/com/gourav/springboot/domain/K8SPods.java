@@ -1,5 +1,8 @@
 package com.gourav.springboot.domain;
 
+/**
+ * @author gourav
+ */
 public class K8SPods {
     String hostName, hostAddress;
 

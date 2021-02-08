@@ -1,4 +1,4 @@
-package com.gourav.springboot;
+package com.gourav.springboot.rest;
 
 
 import com.gourav.springboot.domain.K8SPods;
@@ -14,7 +14,7 @@ import java.net.InetAddress;
 import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.print;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
-/**
+ /**
  * https://spring.io/guides/gs/testing-web/
  * 3 Ways  ways to test Rest or Controller
  *  1. TestRestRequest
@@ -27,23 +27,19 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
  *      @WebMvcTest( WelcomeRestController.class) - light weight
  *
  *  If we want to use Junit5 features add ->  @ExtendWith(SpringExtension.class)
- */
-
-//@SpringBootTest
-//@AutoConfigureMockMvc
-/**
+ *
  * Another useful approach is to not start the server at all but to test only the layer below that,
  * where Spring handles the incoming HTTP request and hands it off to your controller.
  * That way, almost of the full stack is used, and your code will be called in exactly the same way as
  * if it were processing a real HTTP request but without the cost of starting the server.
  * To do that, use Spring’s MockMvc and ask for that to be injected for you by using the @AutoConfigureMockMvc annotation on the test case.
- *
- */
-
-/**
+ * {@code @SpringBootTest}
+ * {@code @AutoConfigureMockMvc}
  * In @AutoConfigureMockMvc test, the full Spring application context is started but without the server.
+ *
  * We can narrow the tests to only the web layer by using @WebMvcTest
  *
+ * @author gourav
  */
 @WebMvcTest( WelcomeRestController.class)
 public class TestWelcomeRestController {
