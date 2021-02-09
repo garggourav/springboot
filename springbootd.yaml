@@ -1,0 +1,51 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: springboot-app
+  namespace: 2712-build-gg
+  labels:
+    app: springboot-lnm
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: springboot-lnm
+  template:
+    metadata:
+      labels:
+        app: springboot-lnm
+    spec:
+      containers:
+      - name: springboot-conm
+        image: gouravgargg/springboot:1.0.0-SNAPSHOT
+        ports:
+        - containerPort: 9090
+      imagePullSecrets:
+        - name: secret2712gg  
+---
+kind: Service
+apiVersion: v1
+metadata:
+  name: springboot-service
+spec:
+  # Expose the service on a static port on each node
+  # so that we can access the service from outside the cluster
+  type: NodePort
+
+  # When the node receives a request on the static port (30163)
+  # "select pods with the label 'app' set to 'k8gg'"
+  # and forward the request to one of them
+  selector:
+    app: springboot-lnm
+  ports:
+    # Three types of ports for a service
+    # nodePort - a static port assigned on each the node
+    # port - port exposed internally in the cluster
+    # targetPort - the container port to send requests to
+    - nodePort: 30163
+      port: 8080
+      targetPort: 9090
+      #microk8s kubectl port-forward -n 2712-build-gg service/k8gg-service 10445:10445 --address 0.0.0.0 &
+      #to access outside - use ip adress: nodeport 
+      # ip address is from virtual  machine name 
+      # node port will be given by kubectl automatic - you need to search
