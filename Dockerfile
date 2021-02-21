@@ -12,7 +12,7 @@ RUN mvn clean package                   #shell form
 FROM openjdk:15.0.1
 
 # copy only the artifacts we need from the first stage and discard the rest
-COPY --from=MAVEN_BUILD /docker-multi-stage-build-demo/target/*.jar /app.jar
+COPY --from=MAVEN_BUILD /springboot/target/*.jar /app.jar
 
 # set the startup command to execute the jar
 ENTRYPOINT ["java","-jar","/app.jar"]
