@@ -28,3 +28,14 @@ Spring Boot Project to
 | REPEATABLE_READ           |   committed data  | Allowed     | Not Allowed | Lock on block of table |
 | SERIALIZABLE              |   committed data  | Not Allowed | Not Allowed | Lock on full table     |
 +---------------------------+-------------------+-------------+-------------+------------------------+
+
+
+REST API:
+    Accept and respond with JSON. 
+    Use nouns instead of verbs in endpoint paths. 
+    Name collections with plural nouns. 
+    Nesting resources for hierarchical objects. 
+    Handle errors gracefully and return standard error codes. 
+    Allow filtering, sorting, and pagination.
+    Maintain Good Security Practices.
+    Cache data to improve performance.
