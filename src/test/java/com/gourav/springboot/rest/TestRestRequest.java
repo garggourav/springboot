@@ -27,8 +27,8 @@ public class TestRestRequest {
     @Autowired
     private TestRestTemplate testRestTemplate;
 
-    @MockBean
-    private CustomerService customerService;
+//    @MockBean
+//    private CustomerService customerService;
 
     @Test
     public void testAPI() {
