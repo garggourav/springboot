@@ -7,18 +7,18 @@ Spring Boot Project to
 
 Propagation
 
-	+-------+---------------------------+-------------------------------------------------------------------------------------------------------+
-	| value | Propagation 			    | Description										    |
-	+-------+---------------------------+-------------------------------------------------------------------------------------------------------+
-	| -1 	| TIMEOUT_DEFAULT 		    | Use the default timeout of the underlying transaction system, or none if timeouts are not supported.	|
-	| 0 	| PROPAGATION_REQUIRED 	    | Support a current transaction; create a new one if none exists. 						        |
-	| 1 	| PROPAGATION_SUPPORTS 	    | Support a current transaction; execute non-transactionally if none exists. 				        |
-	| 2 	| PROPAGATION_MANDATORY	    | Support a current transaction; throw an exception if no current transaction exists. 			        |
-	| 3 	| PROPAGATION_REQUIRES_NEW 	| Create a new transaction, suspending the current transaction if one exists. 			            	|
-	| 4 	| PROPAGATION_NOT_SUPPORTED | Do not support a current transaction; rather always execute non-transactionally. 				        |
-	| 5 	| PROPAGATION_NEVER 		| Do not support a current transaction; throw an exception if a current transaction exists. 		  	|
-	| 6 	| PROPAGATION_NESTED 		| Execute within a nested transaction if a current transaction exists. 					        |
-	+-------+---------------------------+-------------------------------------------------------------------------------------------------------+
+	+-------+---------------------------+-----------------------------------------------------------------------------------------------------------+
+	| value | Propagation 		    | Description										            	|
+	+-------+---------------------------+-----------------------------------------------------------------------------------------------------------+
+	| -1 	| TIMEOUT_DEFAULT 	    | Use the default timeout of the underlying transaction system, or none if timeouts are not supported.	|
+	| 0 	| PROPAGATION_REQUIRED 	    | Support a current transaction; create a new one if none exists. 						|
+	| 1 	| PROPAGATION_SUPPORTS 	    | Support a current transaction; execute non-transactionally if none exists. 				|
+	| 2 	| PROPAGATION_MANDATORY	    | Support a current transaction; throw an exception if no current transaction exists. 			|
+	| 3 	| PROPAGATION_REQUIRES_NEW  | Create a new transaction, suspending the current transaction if one exists. 			        |
+	| 4 	| PROPAGATION_NOT_SUPPORTED | Do not support a current transaction; rather always execute non-transactionally. 				|
+	| 5 	| PROPAGATION_NEVER 	    | Do not support a current transaction; throw an exception if a current transaction exists. 		|
+	| 6 	| PROPAGATION_NESTED 	    | Execute within a nested transaction if a current transaction exists. 					|
+	+-------+---------------------------+-----------------------------------------------------------------------------------------------------------+
 
 Isolation
 
