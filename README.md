@@ -8,7 +8,7 @@ Spring Boot Project to
 Propagation
 
 	+-------+---------------------------+-------------------------------------------------------------------------------------------------------+
-	| value | Propagation 			    | Description													                                        |					
+	| value | Propagation 			    | Description										    |
 	+-------+---------------------------+-------------------------------------------------------------------------------------------------------+
 	| -1 	| TIMEOUT_DEFAULT 		    | Use the default timeout of the underlying transaction system, or none if timeouts are not supported.	|
 	| 0 	| PROPAGATION_REQUIRED 	    | Support a current transaction; create a new one if none exists. 						        |
