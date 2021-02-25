@@ -3,7 +3,7 @@ Spring Boot Project to
 
 	-Test In Memory DB Connectivity
 
-	-Rest controller by Spring Test and JUnit5
+	-Rest controller test by Spring Test and JUnit5
 
 Propagation
 
