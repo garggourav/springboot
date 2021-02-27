@@ -17,12 +17,17 @@ public class WelcomeRestController {
 
     private static final Logger logger = Logger.getLogger(WelcomeRestController.class.getName());
 
-    @GetMapping("/")
-    public String api(){
-        String message =  "Welcome to Landing Page!";
-        logger.info(() -> message);
-        return message;
-    }
+    /**
+     * Disable, localhost:8080 will print all available endpoints
+     * @param name
+     * @return
+     */
+//    @GetMapping("/")
+//    public String api(){
+//        String message =  "Welcome to Landing Page!";
+//        logger.info(() -> message);
+//        return message;
+//    }
 
     @GetMapping("/hello")
     public String hello(@RequestParam(name="name" ,defaultValue = "World!") String name ){
