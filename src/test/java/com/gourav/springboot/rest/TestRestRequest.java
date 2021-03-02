@@ -1,10 +1,8 @@
 package com.gourav.springboot.rest;
 
-import com.gourav.springboot.service.CustomerService;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.boot.test.web.client.TestRestTemplate;
 import org.springframework.boot.web.server.LocalServerPort;
 
@@ -27,14 +25,13 @@ public class TestRestRequest {
     @Autowired
     private TestRestTemplate testRestTemplate;
 
-//    @MockBean
-//    private CustomerService customerService;
 
-    @Test
-    public void testAPI() {
-        String response = testRestTemplate.getForObject("http://localhost:" + port + "/", String.class);
-        org.junit.jupiter.api.Assertions.assertTrue(response.equals("Welcome to Landing Page!"));
-    }
+
+//    @Test
+//    public void testAPI() {
+//        String response = testRestTemplate.getForObject("http://localhost:" + port + "/", String.class);
+//        org.junit.jupiter.api.Assertions.assertTrue(response.equals("Welcome to Landing Page!"));
+//    }
 
     @Test
     public void testWhoIs() {
