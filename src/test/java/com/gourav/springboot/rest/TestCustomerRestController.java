@@ -59,6 +59,10 @@ public class TestCustomerRestController {
 
     }
 
+    /**
+     * While use save DON'T FORGET TO ADD Equal and HasCode METHOD
+     * @throws Exception
+     */
     @Test
     public void testSave() throws Exception {
         Customer customer = new Customer(1L,"Jack", "Bauer");
@@ -69,7 +73,8 @@ public class TestCustomerRestController {
                 org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post("/customer/save")
                         .contentType(MediaType.APPLICATION_JSON)
                         .content(asJsonString(customer)))
-                //.andExpect(status().isCreated())
+                .andDo(org.springframework.test.web.servlet.result.MockMvcResultHandlers.print())
+                .andExpect(status().isCreated())
                 .andExpect(content().contentType(MediaType.APPLICATION_JSON))
                 .andExpect(jsonPath("$.firstName").value("Jack"))
                 .andExpect(jsonPath("$.lastName").value("Bauer"));

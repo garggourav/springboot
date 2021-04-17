@@ -1,5 +1,5 @@
-# springboot
-Spring Boot Project to 
+## springboot
+#####Spring Boot Project to 
 
 	-Test In Memory DB Connectivity
 
@@ -42,3 +42,34 @@ REST API:
     Allow filtering, sorting, and pagination.
     Maintain Good Security Practices.
     Cache data to improve performance.
+
+### JUnit
+https://spring.io/guides/gs/testing-web/   
+
+# ***Don't forget to add equal and hashcode method*** 
+#
+
+#### JUnit 4 
+Web Layer 
+
+    @RunWith(SpringJUnit4ClassRunner.class)
+    @WebMvcTest //Can narrow the tests to only the web layer by using @WebMvcTest. Spring Boot instantiates only the web layer rather than the whole context
+    or @WebMvcTest (RESTController.class) // Load only one controller 
+#### JUnit 4
+Web Layer 
+
+    @RunWith(SpringJUnit4ClassRunner.class)
+    @SpringBootTest //In this test, the full Spring application context is started but without the server.
+    @AutoConfigureMockMvc
+##### JUnit 5
+Web Layer 
+
+    @ExtendWith(SpringExtension.class)  // not required in case of junit5 
+    @WebMvcTest
+    or @WebMvcTest (RESTController.class) // Load only one controller
+##### or JUnit 5
+Web Layer 
+
+    @ExtendWith(SpringExtension.class)  // not required in case of junit5
+    @SpringBootTest
+    @AutoConfigureMockMvc
