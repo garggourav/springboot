@@ -1,4 +1,4 @@
-## springboot
+## spring-boot
 #####Spring Boot Project to 
 
 	-Test In Memory DB Connectivity
@@ -47,29 +47,20 @@ REST API:
 https://spring.io/guides/gs/testing-web/   
 
 # ***Don't forget to add equal and hashcode method*** 
-#
 
-#### JUnit 4 
-Web Layer 
-
+#### Spring JUnit 
+    //JUnit 4
     @RunWith(SpringJUnit4ClassRunner.class)
-    @WebMvcTest //Can narrow the tests to only the web layer by using @WebMvcTest. Spring Boot instantiates only the web layer rather than the whole context
-    or @WebMvcTest (RESTController.class) // Load only one controller 
-#### JUnit 4
-Web Layer 
-
-    @RunWith(SpringJUnit4ClassRunner.class)
-    @SpringBootTest //In this test, the full Spring application context is started but without the server.
-    @AutoConfigureMockMvc
-##### JUnit 5
-Web Layer 
-
-    @ExtendWith(SpringExtension.class)  // not required in case of junit5 
-    @WebMvcTest
-    or @WebMvcTest (RESTController.class) // Load only one controller
-##### or JUnit 5
-Web Layer 
-
+    
+    //JUnit 5
     @ExtendWith(SpringExtension.class)  // not required in case of junit5
+#### Spring Test Framework
+    //1. Web Layer Test 
+    @WebMvcTest //Can narrow the tests to only the web layer by using @WebMvcTest. Spring Boot instantiates only the web layer rather than the whole context
+    
+    //or 2. Web Layer Test
+    @WebMvcTest (RESTController.class) // Load only one controller
+    
+    //OR 3. Web Layer Test
     @SpringBootTest
-    @AutoConfigureMockMvc
+    @AutoConfigureMockMvc    
